@@ -2,7 +2,7 @@
 ###### Beta Version
 It consists of two parts :
 * Server side : desktop application based on electron framework (control panel)
-* Client side : android application (backdoor)
+* Client side : android application (backdoor) 
 
 
 ## Getting Started
