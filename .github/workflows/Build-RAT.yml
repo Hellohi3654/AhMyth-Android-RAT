@@ -18,7 +18,7 @@ jobs:
       run:     
         working-directory: 
           AhMyth-Server
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Cache node_modules
         uses: actions/cache@v2
@@ -58,7 +58,11 @@ jobs:
       - name: Build Linux app (32 bit)
         run: npm run build:linux32
       - name: Build Linux app (64 bit)
-        run: npm run build:linux64
+        run: npm run build:linux64'
+      - name: Wine Get
+        run: wget https://raw.githubusercontent.com/scottyhardy/docker-wine/master/docker-wine
+      - name: Wine Install
+        run: chmod +x docker-wine
       - name: Build Windows App (32 bit)
         run: npm run build:win32
       - name: Build Windows App (64 bit)
