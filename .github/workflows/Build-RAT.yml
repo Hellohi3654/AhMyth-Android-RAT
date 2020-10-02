@@ -18,7 +18,7 @@ jobs:
       run:     
         working-directory: 
           AhMyth-Server
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - name: Cache node_modules
         uses: actions/cache@v2
