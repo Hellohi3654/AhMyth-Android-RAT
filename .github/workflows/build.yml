@@ -61,12 +61,12 @@ jobs:
         run: npm run build:linux32
       - name: Build Linux app (64 bit)
         run: npm run build:linux64
-      - name: Wine Get
-        run: wget https://raw.githubusercontent.com/scottyhardy/docker-wine/master/docker-wine
-      - name: Wine Install
-        run: chmod +x docker-wine
+      - name: Win 32
+        run: electron-builder --win --ia32
       - name: Build Windows App (32 bit)
         run: npm run build:win32
+      - name: Win 64
+        run: electron-builder --win --x64
       - name: Build Windows App (64 bit)
         run: npm run build:win64
       - name: Upload - push to artifact files
